@@ -10,21 +10,8 @@ const config = {
     video: 'on-first-retry',
     
   },
-  reporter: "list"
+  reporter: [["list"],["dot"],["allure-playwright"],]
 
 };
 
 module.exports = config;
-
-/**
-
-const config = {
-  timeout: 30000,
-  globalTimeout: 600000,
-  reporter: 'list',
-  testDir: './tests',
-};
-
-module.exports = config;
-allure-playwright
- */
