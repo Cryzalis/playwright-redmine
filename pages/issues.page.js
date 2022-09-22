@@ -5,6 +5,7 @@ exports.IssuesPage = class IssuesPage {
    * @param {import('@playwright/test').Page} page
    */
   constructor(page) {
+    this.page = page;
     this.firstIssue = page.locator('tr td:nth-child(5) a').nth(1);
     this.apply = page.locator('a', { hasText: 'Apply' });
     this.select = page.locator('#operators_status_id');

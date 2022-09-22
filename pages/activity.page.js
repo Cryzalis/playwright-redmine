@@ -5,6 +5,7 @@ exports.ActivityPage = class ActivityPage {
    * @param {import('@playwright/test').Page} page
    */
   constructor(page) {
+    this.page = page;
     this.checked = page.locator('input[checked]');
     this.checkboxMessages = page.locator('#show_messages')
     this.buttonApply = page.locator("input[type='submit']")
@@ -29,6 +30,9 @@ exports.ActivityPage = class ActivityPage {
     await this.clickMessage()
     await this.clickApply()
     expect(val).not.toEqual((await this.firstActivity.innerText()).valueOf())
+  }
+  async checkUrl(){
+    await expect(this.page).toHaveURL(/.*activity/);
   }
   
 }

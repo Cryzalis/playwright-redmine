@@ -10,7 +10,7 @@ const config = {
     video: 'on-first-retry',
     
   },
-  reporter: "allure-playwright"
+  reporter: "list"
 
 };
 
@@ -26,4 +26,5 @@ const config = {
 };
 
 module.exports = config;
+allure-playwright
  */

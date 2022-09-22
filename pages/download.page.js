@@ -5,6 +5,7 @@ exports.DownloadPage = class DownloadPage {
    * @param {import('@playwright/test').Page} page
    */
   constructor(page) {
+    this.page = page;
     this.header = page.locator('#content h1');
     this.h2 = page.locator('h2:first-of-type');
     this.sidebarElements = page.locator('#sidebar h3')

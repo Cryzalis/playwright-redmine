@@ -5,6 +5,7 @@ exports.RoadmapPage = class RoadmapPage {
    * @param {import('@playwright/test').Page} page
    */
   constructor(page) {
+    this.page = page;
     this.forms = page.locator('#content form');
     this.percent = page.locator('#content .percent')
     
