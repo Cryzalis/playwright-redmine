@@ -4,8 +4,9 @@
 const config = {
   use: {
     headless: true,
+    baseURL: 'https://www.redmine.org/',
     viewport: { width: 1280, height: 720 },
-    channel: 'chrome',
+    channel: 'chromium',
     ignoreHTTPSErrors: true,
     video: 'on-first-retry',
     

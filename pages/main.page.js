@@ -17,7 +17,7 @@ exports.MainPage = class MainPage {
   }
 
   async goto() {
-    await this.page.goto('https://www.redmine.org/');
+    await this.page.goto('/');
   }
 
   async checkHeader() {
